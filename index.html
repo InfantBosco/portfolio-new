@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infant Bosco - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Minimal loading progress line -->
+  <div id="loader" class="loader-line"></div>
+
+  <!-- Hero / Home Section (100vh) -->
+  <section class="hero-section" id="hero">
+    <div class="canvas-wrapper">
+      <canvas id="hero-canvas"></canvas>
+      <!-- Bold title placed at chest level -->
+      <div class="hero-text-overlay">
+        <h1 class="hero-title">INFANT BOSCO</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- About The Engineer Section (Placed directly below Home Screen) -->
+  <section class="about-section" id="about">
+    <div class="about-container">
+      
+      <!-- Section Tag -->
+      <div class="section-tag">
+        <span class="tag-icon">❖</span> // 02 ABOUT THE ENGINEER
+      </div>
+
+      <!-- Main Headline with Italic Accents -->
+      <h2 class="about-headline">
+        Architecting robust web systems with <em>clarity</em> & <em>performance.</em>
+      </h2>
+
+      <!-- Main 2-Column Grid -->
+      <div class="about-grid">
+        
+        <!-- Left: Background & Overview Card -->
+        <div class="card about-main-card">
+          <h3 class="card-title">Background & Overview</h3>
+          <p class="card-description">
+            First-year Computer Science & Engineering student with experience building and deploying full-stack web applications using React, Flask, and PostgreSQL. Interested in software engineering, product development, API integration, and scalable web systems.
+          </p>
+
+          <!-- 2x2 Feature Highlights -->
+          <div class="features-grid">
+            
+            <div class="feature-item">
+              <div class="feature-icon text-white">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <div class="feature-content">
+                <h4 class="feature-title">Frontend Engineering</h4>
+                <p class="feature-desc">React.js, Tailwind CSS, Recharts for data visualization.</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon icon-amber">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="7" rx="2"></rect>
+                  <rect x="2" y="14" width="20" height="7" rx="2"></rect>
+                  <line x1="6" y1="6.5" x2="6.01" y2="6.5"></line>
+                  <line x1="6" y1="17.5" x2="6.01" y2="17.5"></line>
+                </svg>
+              </div>
+              <div class="feature-content">
+                <h4 class="feature-title">Backend & APIs</h4>
+                <p class="feature-desc">Flask REST APIs, JWT authentication, modular server logic.</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon text-white">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+              </div>
+              <div class="feature-content">
+                <h4 class="feature-title">Database Architectures</h4>
+                <p class="feature-desc">PostgreSQL, SQLite, and MongoDB document stores.</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon icon-amber">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                  <path d="M3 9h18"></path>
+                  <path d="M9 21V9"></path>
+                </svg>
+              </div>
+              <div class="feature-content">
+                <h4 class="feature-title">Scalable Products</h4>
+                <p class="feature-desc">End-to-end cloud deployments on Vercel & Render.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: 3 Metric Stats Cards -->
+        <div class="about-stats-col">
+          
+          <div class="card stat-card">
+            <span class="stat-label">CGPA (Karunya Univ)</span>
+            <div class="stat-value">8.84 / 10</div>
+          </div>
+
+          <div class="card stat-card">
+            <span class="stat-label">Projects Built</span>
+            <div class="stat-value">6</div>
+          </div>
+
+          <div class="card stat-card">
+            <span class="stat-label">Codebase Status</span>
+            <div class="stat-value">100% Open Source</div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Academic Foundation Block -->
+      <div class="academic-block">
+        <div class="academic-header">
+          <div class="academic-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+          </div>
+          <h3 class="academic-title">Academic Foundation</h3>
+        </div>
+
+        <div class="card academic-card">
+          <h4 class="degree-title">B.Tech – Computer Science & Engineering</h4>
+          <p class="institution-name">Karunya Institute of Science and Technology, Coimbatore</p>
+          <div class="timeline-cgpa">2025 – 2029 (Expected) • CGPA: 8.84/10</div>
+
+          <div class="achievements-section">
+            <h5 class="achievements-heading">Key Achievements</h5>
+            <ul class="achievements-list">
+              <li class="achievement-item">
+                <span class="achievement-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#eab308" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="9 12 11 14 15 10"></polyline>
+                  </svg>
+                </span>
+                <span class="achievement-text">Strong academic standing with consistent performance</span>
+              </li>
+              <li class="achievement-item">
+                <span class="achievement-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#eab308" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="9 12 11 14 15 10"></polyline>
+                  </svg>
+                </span>
+                <span class="achievement-text">Building real-world full-stack applications during studies</span>
+              </li>
+              <li class="achievement-item">
+                <span class="achievement-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#eab308" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="9 12 11 14 15 10"></polyline>
+                  </svg>
+                </span>
+                <span class="achievement-text">Active in open-source development and community learning</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 03: Technical Proficiency & Stack -->
+  <section class="skills-section" id="skills">
+    <div class="skills-container">
+
+      <!-- Section Tag -->
+      <div class="section-tag">
+        <span class="tag-icon">◎</span> // 03 TECHNICAL PROFICIENCY & STACK
+      </div>
+
+      <!-- Headline -->
+      <h2 class="skills-headline">
+        Technologies I use to <em>craft modern software.</em>
+      </h2>
+
+      <!-- Search Skills Bar -->
+      <div class="skills-search-wrapper">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="skills-search" class="skills-search-input" placeholder="Search skills (e.g. React, Flask...)" autocomplete="off">
+      </div>
+
+      <!-- 3x2 Skills Grid -->
+      <div class="skills-grid">
+
+        <!-- Card 1: Languages -->
+        <div class="card skill-card">
+          <div class="skill-card-header">
+            <h3 class="skill-card-title">Languages</h3>
+            <div class="skill-card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                <rect x="9" y="9" width="6" height="6"></rect>
+                <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="skill-badges">
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">C</span>
+            <span class="skill-badge">JavaScript</span>
+            <span class="skill-badge">HTML5</span>
+            <span class="skill-badge">CSS3</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Frontend -->
+        <div class="card skill-card skill-card-featured">
+          <div class="skill-card-header">
+            <h3 class="skill-card-title">Frontend</h3>
+            <div class="skill-card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                <rect x="9" y="9" width="6" height="6"></rect>
+                <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="skill-badges">
+            <span class="skill-badge">React.js</span>
+            <span class="skill-badge highlighted">Tailwind CSS</span>
+            <span class="skill-badge">Recharts</span>
+            <span class="skill-badge">JSON</span>
+            <span class="skill-badge">Responsive UI</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Backend -->
+        <div class="card skill-card">
+          <div class="skill-card-header">
+            <h3 class="skill-card-title">Backend</h3>
+            <div class="skill-card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                <rect x="9" y="9" width="6" height="6"></rect>
+                <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="skill-badges">
+            <span class="skill-badge">Flask</span>
+            <span class="skill-badge">REST APIs</span>
+            <span class="skill-badge">JWT Authentication</span>
+            <span class="skill-badge">Python Backend</span>
+          </div>
+        </div>
+
+        <!-- Card 4: Databases -->
+        <div class="card skill-card">
+          <div class="skill-card-header">
+            <h3 class="skill-card-title">Databases</h3>
+            <div class="skill-card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                <rect x="9" y="9" width="6" height="6"></rect>
+                <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="skill-badges">
+            <span class="skill-badge">PostgreSQL</span>
+            <span class="skill-badge">SQLite</span>
+            <span class="skill-badge">MongoDB</span>
+          </div>
+        </div>
+
+        <!-- Card 5: Tools & Workflow -->
+        <div class="card skill-card">
+          <div class="skill-card-header">
+            <h3 class="skill-card-title">Tools & Workflow</h3>
+            <div class="skill-card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                <rect x="9" y="9" width="6" height="6"></rect>
+                <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="skill-badges">
+            <span class="skill-badge">Git</span>
+            <span class="skill-badge">GitHub</span>
+            <span class="skill-badge">Postman</span>
+            <span class="skill-badge">VS Code</span>
+            <span class="skill-badge">Agile Iterations</span>
+          </div>
+        </div>
+
+        <!-- Card 6: Deployment & Cloud -->
+        <div class="card skill-card">
+          <div class="skill-card-header">
+            <h3 class="skill-card-title">Deployment & Cloud</h3>
+            <div class="skill-card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                <rect x="9" y="9" width="6" height="6"></rect>
+                <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="skill-badges">
+            <span class="skill-badge">Vercel</span>
+            <span class="skill-badge">Render</span>
+            <span class="skill-badge">Cloudinary</span>
+            <span class="skill-badge">Railways</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
