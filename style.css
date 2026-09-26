@@ -520,6 +520,226 @@ html, body {
   opacity: 0.25;
 }
 
+/* ==========================================================================
+   SECTION 04: FEATURED WORK & PROJECTS
+   ========================================================================== */
+
+.projects-section {
+  position: relative;
+  width: 100%;
+  background-color: #f54a10;
+  color: #ffffff;
+  padding: 4rem 2rem 7.5rem;
+  box-sizing: border-box;
+}
+
+.projects-container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.projects-headline {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(2.3rem, 4.3vw, 3.85rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  max-width: 960px;
+}
+
+.projects-headline em {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Filter Buttons */
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 2.25rem;
+}
+
+.filter-btn {
+  background: rgba(0, 0, 0, 0.22);
+  color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 9999px;
+  padding: 0.45rem 1.15rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.filter-btn:hover {
+  background: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+}
+
+.filter-btn.active {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.35rem;
+  align-items: stretch;
+}
+
+.project-card {
+  padding: 2.4rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, opacity 0.25s ease;
+}
+
+.project-card.hidden {
+  display: none;
+}
+
+.project-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.project-top-bar .project-category {
+  margin-bottom: 0;
+}
+
+.status-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 6px;
+  padding: 0.25rem 0.65rem;
+  line-height: 1.2;
+}
+
+.project-category {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #facc15;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.project-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+.project-deepdive {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.project-deepdive:hover {
+  color: #ffffff;
+}
+
+.project-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.25rem;
+  line-height: 1.4;
+}
+
+.project-desc {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.91rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 1.5rem;
+}
+
+/* Bullet Points */
+.project-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.project-bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.bullet-arrow {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.75rem;
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+
+/* Tags at bottom of card */
+.project-tags {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.project-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  user-select: none;
+}
+
 /* Responsive Breakpoints */
 @media (max-width: 960px) {
   .about-grid {
@@ -533,6 +753,9 @@ html, body {
   }
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -563,6 +786,15 @@ html, body {
     padding: 1.85rem 1.4rem;
   }
   .skills-headline {
+    font-size: 2.15rem;
+  }
+  .projects-section {
+    padding: 3.5rem 1.25rem 5rem;
+  }
+  .project-card {
+    padding: 1.85rem 1.4rem;
+  }
+  .projects-headline {
     font-size: 2.15rem;
   }
 }
