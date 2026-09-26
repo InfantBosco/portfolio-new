@@ -293,11 +293,138 @@
     });
   });
 
+  // Copy Email to Clipboard
+  const copyEmailBtn = document.getElementById('copy-email-btn');
+  if (copyEmailBtn) {
+    copyEmailBtn.addEventListener('click', () => {
+      const email = 'boscoinfant18@gmail.com';
+      navigator.clipboard.writeText(email).then(() => {
+        const originalHTML = copyEmailBtn.innerHTML;
+        copyEmailBtn.innerHTML = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
+        setTimeout(() => {
+          copyEmailBtn.innerHTML = originalHTML;
+        }, 2000);
+      }).catch(() => {});
+    });
+  }
+
+  // Contact Form Submission
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitBtn = document.getElementById('contact-submit-btn');
+      const originalHTML = submitBtn.innerHTML;
+      submitBtn.innerHTML = `<span>Message Sent!</span> <span style="color:#22c55e;">✔</span>`;
+      submitBtn.disabled = true;
+      contactForm.reset();
+      setTimeout(() => {
+        submitBtn.innerHTML = originalHTML;
+        submitBtn.disabled = false;
+      }, 3500);
+    });
+  }
+
+  // Scroll to Top Button
+  const scrollTopBtn = document.getElementById('scroll-top-btn');
+  if (scrollTopBtn) {
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  // Glitter Canvas Engine (Effect 1)
+  function initGlitterCanvas() {
+    const canvas = document.getElementById('glitter-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    let particles = [];
+    let isActive = false;
+
+    const handleResize = () => {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize, { passive: true });
+
+    // View-awareness via IntersectionObserver
+    const contactSec = document.getElementById('contact');
+    if (contactSec && 'IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          isActive = entry.isIntersecting;
+        });
+      }, { threshold: 0.1 });
+      observer.observe(contactSec);
+    } else {
+      isActive = true;
+    }
+
+    // Spawn 4-point diamond particles
+    const spawn = () => {
+      const count = isActive ? 6 : 2;
+      for (let i = 0; i < count; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: canvas.height + 10,
+          size: 1.5 + Math.random() * 3.5,
+          speedY: -(0.5 + Math.random() * 1.5),
+          speedX: (Math.random() - 0.5) * 0.8,
+          alpha: 0.8 + Math.random() * 0.2,
+          decay: 0.005 + Math.random() * 0.008,
+          hue: Math.random() > 0.5 ? '#ffe600' : '#ffffff',
+          spin: (Math.random() - 0.5) * 0.1,
+          angle: Math.random() * Math.PI * 2,
+        });
+      }
+    };
+
+    let frame = 0;
+    const render = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      frame++;
+      if (frame % 3 === 0) spawn();
+      particles = particles.filter((p) => p.alpha > 0.01);
+      particles.forEach((p) => {
+        p.y += p.speedY;
+        p.x += p.speedX;
+        p.alpha -= p.decay;
+        p.angle += p.spin;
+        ctx.save();
+        ctx.globalAlpha = Math.max(0, p.alpha);
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.angle);
+        // 4-point diamond star geometry
+        ctx.fillStyle = p.hue;
+        ctx.beginPath();
+        ctx.moveTo(0, -p.size);
+        ctx.lineTo(p.size * 0.38, 0);
+        ctx.lineTo(0, p.size);
+        ctx.lineTo(-p.size * 0.38, 0);
+        ctx.closePath();
+        // Luminous outer glow
+        ctx.shadowColor = p.hue;
+        ctx.shadowBlur = p.size * 4;
+        ctx.fill();
+        ctx.restore();
+      });
+      requestAnimationFrame(render);
+    };
+    render();
+  }
+
   // Event Listeners
   window.addEventListener('resize', resizeCanvas);
 
   // Initialize
   resizeCanvas();
   preloadAllFrames();
+  initGlitterCanvas();
   requestAnimationFrame(animationLoop);
 })();
