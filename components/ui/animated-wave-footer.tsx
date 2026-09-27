@@ -8,7 +8,7 @@ import { Link2, Camera, Briefcase, MessageCircle } from "lucide-react";
 
 export default function AnimatedWaveFooter() {
   return (
-    <footer className="relative bg-linear-to-b from-background to-primary/10 pt-20">
+    <footer className="relative border-t border-white bg-linear-to-b from-background to-primary/10 pt-20">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute bottom-0 h-[500px] w-[1800px] animate-wave">
           <svg

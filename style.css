@@ -1146,6 +1146,7 @@ html, body {
   padding: 4rem 2rem 3.5rem;
   box-sizing: border-box;
   overflow: hidden;
+  border-top: 1px solid #ffffff;
 }
 
 /* Animated Wave Background Layer */
